@@ -86,17 +86,17 @@ Sometimes an employee's IAM account is only disabled when they leave a company. 
 
 A: It is common to disable accounts of prior employees in order to retain the identity for auditing purposes for a few months. After the allotted time, if no incidents are discovered in regard to the ex-employee's account, then it can be deleted from the IAM completely. If the account is deleted prematurely, any logged events that are of a security concern no longer point to an actual account and thus can make tracking down further evidence of violations more complicated.
 
-Why should the offboarding process be well-documented?
-
-A: The procedures for onboarding and offboarding should be clearly documented in order to ensure consistency of application as well as compliance with regulations or contractual obligations.
-
 What communication needs to occur to prevent employees from re-entering the building after they no longer work for the company?
 
 A: Telling security guards and other physical facility and property access management personnel to disallow re-entry.
 
-What does the final meeting where an employee is let go look like? Who should be there?
+When employees are let go, they should be reminded of...
 
-A: In addition to the HR employee and the soon to be ex-employee, there should be at least one witness, preferably a higher-level manager and/or a security guard, at the meeting. Once the employee has been informed of their release, they should be reminded of the liabilities and restrictions placed on the former employee based on the employment agreement, NDAs, and any other security-related documentation. During this meeting, all organization-specific identification, access, or security badges as well as devices, cards, keys, and access tokens should be collected.
+A: the liabilities and restrictions placed on the former employee based on the employment agreement, NDAs, and any other security-related documentation.
+
+When employees are let go, there should be at least ___ ___ at the departing meeting.
+
+A: one witness
 
 What should the offboarding process be like for non-voluntary terminations where there is a perceived risk of confrontation?
 
@@ -114,5 +114,61 @@ What kind of fuck-up is common when firing an employee?
 
 A: Companies have often initiated the offboarding process before letting the employee know. This can cause disgruntled employees, who still have not been let go, to take it out on the company. For instance companies may let layoff information leak to the media, or disable someone's badge or phone, before telling the employee that they're being let go.
 
+If multiple companies work on a project, will the sum security be the security of each of their policies added together? What is one way to help address "multiparty risk"?
 
+When multiple companies work together, their risk policies may end up interfering with each other. One solution some companies use is to have a risk management governing body to oversee and enforce consistent security parameters for all companies involved.
+
+What is a vendor management system (VMS)? What are the security benefits of using one?
+
+Software that can be useful when you hire a vendor. You can keep your contracts and purchases and communications with the vendors within the system.
+It can be helpful from a security perspective by keeping communications and contracts confidential, encrypting transactions, and maintaining a log of events between you and the vendors.
+
+Should you document your organization's stance on policy? Who does this policy impact?
+
+A: Yes. Important for visitors to your online offerings as well as customers, employees, suppliers and contractors.
+
+What is "risk management"? 
+
+A: The process of identifying factors that could damage or disclose assets, evaluating them in light of asset value and countermeasure cost, and implementing cost-effective solutions.
+
+What two components is risk management composed of?
+
+A: Risk assessment aka risk analysis, and risk response.
+
+What is risk awareness?
+
+A: The effort to increase the knowledge of risks within an organization.
+
+What is a threat vector?
+
+A: The path by which a threat agent/threat actor can act to cause harm. Examples can be thumb drives, wi-fi networks, etc.
+
+What is a formula for calculating risk?
+
+risk = threat * vulnerability, where threat refers to a bad thing that could happen, and a vulnerability refers to how vulnerable you are to the threat. So if there's less threats out there, even if you're very vulnerable then your risk is low. Or if there are a lot of threats then you need to reduce your vulnerability through patching or other safeguards to reduce your overall risk.
+
+Fill in the blanks in the file cyclical_relationships_of_risk_elements.png in this folder. One word per blank.
+
+Starting from the top, going counter-clockwise:
+Threats, Vulnerabilities, Exposure, Risk, Safeguards, Assets
+
+Do most organizations use quantitative risk analysis or qualitative risk analysis?
+
+Most organizations use a mixture of both in order to have a complete view of their overall risk landscape.
+
+Which might you do first, quantitative or qualitative risk analysis?
+
+It's not a hard rule, but the book suggests perhaps doing qualitative risk assessment first and then getting more details if necessary. The book also says that an organization might use both simultaneously, and then use each approach to fine-tune the other.
+
+The goal of risk assessment is to come up with a prioritized list of ____ ____ pairings.
+
+A: asset-threat
+
+Should asset valuation be done first? Or should threat assessment be done first?
+
+Either can be used. Doing asset valuation first can be useful so you aren't pursuing threats which don't cause any impact, but doing threat evaluation first has its own advantages too. (Eleventh Hour CISSP talks more about the tradeoffs of each approach than this book.)
+
+What is one of the simplest ways to do qualitative risk analysis?
+
+A 3x3 matrix of the probability of a threat versus the damage of that threat event.
 
