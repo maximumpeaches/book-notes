@@ -20,4 +20,31 @@ Having SREs and security engineers review the code can also help. Manual code re
 won't catch every issue, and automated or no-op solutions like using frameworks, libraries or languages that are secure
 by default is important, too.
 
+## Chapter 13
+
+JUnit for Java, GoogleTest for C++, go2xunit for Golang, and unittest for Python are all examples of what unit testing paradigm?
+
+A: xUnit. See https://en.wikipedia.org/wiki/XUnit for more context.
+
+What is a hermetic test?
+
+One which runs completely independently and in isolation from other tests.
+
+What is mutation testing?
+
+A: Injecting small faults into programs to see where code fails. I think basically you set a value to true, and then see
+if a test would fail or not. If no test fails, you can give developers warnings.
+
+I agree with their point that it's important to have a definition somewhere of what mocks, stubs and fakes mean, since
+if someone proposes to build a fake, for instance, it's important to have a common understanding of what that proposal means.
+
+What does unit testing pay off in the long-run, according to this book?
+
+It leads to a higher-quality codebase and fewer edge cases to debug. You can also catch bugs earlier, often before even committing the code.
+
+Why is it okay to use a production database in an integration test?
+
+It's not! You should use test data. The reason for this is that you don't want to screw with customer data, and also
+if an attacker gained access to your integration test you don't want that to imply access to your production data.
+Also, having a test set of data makes the data easy to wipe between tests, which can reduce test flakiness.
 
