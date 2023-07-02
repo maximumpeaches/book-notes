@@ -20,6 +20,30 @@ Having SREs and security engineers review the code can also help. Manual code re
 won't catch every issue, and automated or no-op solutions like using frameworks, libraries or languages that are secure
 by default is important, too.
 
+## Book Club
+
+What is something many organizations, who wish to restore from backups, fail to do after backing up their systems?
+
+A: Test they can restore from those backups successfully.
+
+Security and reliability are both often managed by ___ ___ employees and brought up in ___ ___ review process.
+
+A: the same
+
+What are benefits of compliance regulations? What are some drawbacks?
+
+Pros: Some organizations will allocate resources on security when they wouldn't've otherwise. It can incentivize
+organizations whom otherwise would've had no incentives. These can facilitate change.
+Cons: Some organizations will do "security by checkbox", meaning they meet the letter of the law but don't enact
+meaningful change. Somtimes big organizations will lobby for compliance regulations as a way to inhibit competition
+from smaller organizations which don't have the resources needed to be compliant.
+Overall compliance regulations can get you part of the way to security, but you'll need to go beyond that 
+(similar to code coverage metrics, or any other metric / checkbox).
+
+If you want your login system to be secure, what is one thing you should do?
+
+A: Monitor all of the logins that occur.
+
 ## Chapter 13
 
 JUnit for Java, GoogleTest for C++, go2xunit for Golang, and unittest for Python are all examples of what unit testing paradigm?

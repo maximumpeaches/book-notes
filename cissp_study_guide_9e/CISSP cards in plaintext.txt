@@ -1,0 +1,155 @@
+#separator:tab
+#html:true
+What is Kerchoff's Principle?	"Security algorithms are more secure if everything about them is public but the key. Many agree, but a few disagree.
+
+6"
+Is a symmetric or an asymmetric cryptographic algorithm more suitable for nonrepudiation?	"Asymmetric because it has a unique combination of public and private key for each user. Users use the same private key in symmetric algorithms.
+
+6"
+What does the P and C stand for in cryptographic formulas?	"Plaintext and ciphertext
+
+6"
+How are the key space and bit size related in cryptographic algorithms?	"They're positively correlated. 
+
+6"
+What is a nonce? How is it related to a IV?	"I didn't really understand this part. Maybe you can Google it to supplement the book.
+
+6"
+What is a zero-knowledge proof?	"A proof where you show someone you know something without sharing what you know. For instance opening a door with a password shows you know the password.
+
+6"
+What is key escrow?	"When a key can be recovered by agents if it's lost (please Google this too... What does the word escrow mean?)
+
+6"
+What is split knowledge? Give an example.	"A security principle where secret knowledge is shared by multiple people.
+
+6"
+What is M of N control?	"When a minimum of M agents out of N total must perform a high security task. 
+
+6"
+What is a work function? How can it be used to determine an appropriate cryptographic system?	"A work function represents the amount of time and effort required to brute force a cryptographic algorithm.<br><br>A cryptographic system should be chosen that's cost and time efficient. The higher the value of the data, the harder it should be to crack. A work function can be used to select a cryptographic system which makes it more expensive to crack than the data is worth (considering also how the data may become less valuable over time, and the ciphertext easier to decode over time as well).
+
+6"
+"Are codes used to hide the meaning of messages? What about ciphers?<br><br>Is ""10-4"" (meaning ""understood"") a code or cipher?"	"Codes can be used to keep the message secret, but not always. For instance 10-4 is a code and is used for ease of communication, not secrecy. A cipher is always intended to keep information secret.
+
+6"
+Codes operate on ___ and ___, whereas ciphers operate on ___, ___, or ___.	"Words and phrases<br>Bits, letters or blocks
+
+6"
+What is a transposition cipher?	"Rearrange the letters or bits of a message.
+
+6"
+What is a substitution cipher?	"Substitute each letter or bit with a different letter or bit.
+
+6"
+What is a one time pad? How long are they? What are the major pros and cons?	"A physical pad used to encrypt a message.<br><br>They're at least as long as the message.<br><br>When properly used they are unbreakable because there's one letter in the cipher for each letter in the message so there aren't any patterns such as how many letters they contain. Main cons are the difficulties in generating, distributing and safeguarding them.
+
+6"
+What is the Vernam cipher another name for?	"The one time pad. It was invented by Gilbert Vernam.
+
+6"
+How was the Caesar cipher used? Explain how it works.	"Used by Caesar to send messages back to Rome.<br><br>It works by shifting each letter in a message a certain number of times to the right, then taking mod of the result if it went past the end of the alphabet.
+
+6"
+What was the VENONA project?	"A program by the US which cracked Soviet one time pads because they weren't 100% random in how they were generated, so they could find patterns in how they were used.
+
+6"
+The running key cipher, also called the ___ ___, works the same way as ____ ___ ___. How does it work?	"Book cipher<br>One time pads<br><br>You agree on a spot in a book and then use each letter from that spot to encode your message the same way you'd use a one time pad.
+
+6"
+How does a one time pad cipher work?	"(might be some slight variations on this, but one example way would be:) You add a letter from a pad to the letter in your message, then take mod 26 (the number of characters in the alphabet) to get the resulting letter in your the encrypted message. Thats why the pad has to be at least as long as your message.
+
+6"
+Tell me whether each of the following is a block or streaming cipher: transposition, Caesar, one time pad.	"Transposition - block because it rearranges the letters of the entire message at once<br>Caesar - streaming because it operates on one letter at a time<br>One time pad - streaming because it operates on one letter at a time
+
+6"
+What does diffusion mean in the context of ciphers?	"Diffusion refers to one change in the plaintext causes changes in multiple places in the cipher text.
+
+6"
+What are four disadvantages to symmetric key algorithms?	"Key distribution is very hard<br>It does not implement nonrepudiation<br>It would require a massive number of shared private keys for a large organization because every two individuals must each have their own private key, whereas in asymmetric key algorithms each user just has their own private and public key<br>Every time an individual leaves a group, all keys they knew about must be discarded
+
+6"
+What is the big advantage of symmetric key algorithms?	"They can be 1,000 to 10,000 times faster than public key algorithms.
+
+6"
+What is a message digest?	"A summary of a message contents produced by a hashing algorithm (not unlike a file checksum).
+
+6"
+What is Skipjack?	"A something (need to Google it) where the escrow key used to decrypt messages is split between two federal agencies.
+
+"
+What are synonyms for symmetric key cryptography?	"Private key cryptography and secret key cryptography.
+
+6"
+In asymmetric cryptography, if the public key encrypts a message, what is needed to decrypt it?	"The private key
+
+6"
+How could Bob sign a message to prove it was him who signed it?	"He can create a message digest and encrypt it with his private key. If it can be decrypted using Bob's public key then it proves he signed it.
+
+6"
+All DES modes operate on ____ bits of plaintext at a time to produce ____ bits of ciphertext.	"64 bits for both
+
+6"
+How long is the key used by DES?	"56 bits.<br><br>8 of the 64 bits which could be used are intended to be used to verify the message or something (I forget - what are those 8 bits used for?) so they cannot be used to encrypt the message.
+
+6"
+When was the DES proposed? Who proposed it?	"In 1977 by the US government
+
+6"
+When was the AES introduced? What does it stand for? What did it replace?	"2001<br>Advanced encryption standard<br>The DES
+
+6"
+Controlling access to any resource in a secure system involves two entities. The subject is _____ The object is ____ . Keep in mind that the subject and object refer to some specific access request, so the same resource can serve as a subject and an object in different access requests.	"the user or process that makes a request to access a resource. Access can mean reading from or writing to a resource.<br><br>the resource a user or process wants to access
+
+8"
+What is this an example of:<br><br>An organization blocks access to Facebook or YouTube to increase worker productivity. Thus, workers (A) do not have access to certain internet sites (C). However, if workers are able to access to a web proxy, virtual private network (VPN), or anonymization service, then this can serve as a means to bypass the local network restriction. In other words, if workers (A) are accessing VPN service (B), and the VPN service (B) can access the blocked internet service (C); then A is able to access C through B via a transitive trust exploitation.	"Transitive trust
+
+8"
+A closed system is ____ Open systems, on the other hand, are _____	"designed to work well with a narrow range of other systems, generally all from the same manufacturer. The standards for closed systems are often proprietary and not normally disclosed.<br><br>designed using agreed-upon industry standards. Open systems are much easier to integrate with systems from different manufacturers that support the same standards.
+
+8"
+Is it easier to attack open systems or closed systems?	"Open systems because there are so many of them that the ways to hack into them are more well known. There are even more targets to practice on. Closed systems require unique knowledge and attack methods.
+
+8"
+What is the difference between systems that have physical bounds vs logical bounds?	"Systems with physical bounds require each process to run in a separate physical section of memory. They are more expensive. Systems with logical bounds allow processes to run in the same physical memory space, but they are kept logically separate, often by the OS. Logical bounds are less secure.
+
+8"
+Process confinement, also known as _____, is a security technique where processes are _____.	"Sandboxing<br><br>Only allowed to read and write from certain memory locations and resources.
+
+8"
+When a process is confined through enforcing access bounds, that process runs in ____.	"isolation
+
+8"
+____ _____ facilitate sharing memory and resources such as printers, keyboards, and the clipboard, between processes.	"Operating systems
+
+8"
+A ____ uses access rules to limit the access of a subject to an object. What is an example of this if the object is a file?	"control<br><br>The file could be read for most users but read or write for certain users.
+
+8"
+A ____ _____ is one in which all protection mechanisms work together to process sensitive data for many types of users while maintaining a stable and secure computing environment. ______ is the degree of confidence in satisfaction of security needs.	"Trusted system<br><br>Assurance
+
+8"
+What is a trusted computing base? What should its size be? What should it be able to do?	"The TCB is the only portion of that system that can be trusted to adhere to and enforce the security policy.<br><br>Small so it can be reasoned about thoroughly.<br><br>Provide access to components within and outside itself, and enforce the security policy by restricting access of components outside the TCB.
+
+8"
+How does the security perimeter relate to the TCB?	"The security perimeter of your system is an imaginary boundary that separates the TCB from the rest of the system
+
+8"
+What is a trusted path?	"For the TCB to communicate with the rest of the system, it must create secure channels, also called trusted paths. A trusted path is a channel established with strict standards to allow necessary communication to occur without exposing the TCB to security vulnerabilities. A trusted path also protects system users (sometimes known as subjects) from compromise as a result of a TCB interchange.
+
+8"
+What is a reference monitor?	"The part of the TCB that validates access to every resource prior to granting access requests is called the reference monitor. The reference monitor may be a conceptual part of the TCB; it doesn’t need to be an actual, stand-alone, or independent working system component.
+
+8"
+The reference monitor is a concept or theory that is put into practice via the implementation of a ____ _____ in software and hardware.	"security kernel
+
+8"
+A secure state machine....	"is secure in any state it transitions to.
+
+8"
+The Bell-LaPadula and Biba models are both ____ ____ ____.	"information flow models
+
+8"
+The information flow model focuses on the flow of information. Information flow models are based on a ____ ____ ____.	"state machine model
+
+8"
