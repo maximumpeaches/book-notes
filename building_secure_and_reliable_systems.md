@@ -72,3 +72,54 @@ It's not! You should use test data. The reason for this is that you don't want t
 if an attacker gained access to your integration test you don't want that to imply access to your production data.
 Also, having a test set of data makes the data easy to wipe between tests, which can reduce test flakiness.
 
+How is dynamic analysis different from static analysis.
+
+Dynamic analysis is similar to static analysis but is done while the software is running.
+
+____ ____ and ___ ____ report generators are the best-known types of dynamic analysis.
+
+Performance profilers and code coverage report generators
+
+ASan is a C/C++ dynamic analysis tool. It builds a binary from source code, similar to a regular compiler, but adds
+instructions which do extra stuff when the code runs which can help find memory bugs, like writing to unsafe locations.
+Add instructions like this to the compiler is called what?
+
+Instrumentation
+
+Generating random numbers and passing them to software, to see if the software crashes, is called what?
+
+Fuzzing
+
+What is a seed corpus and how is it used in fuzz testing?
+
+A seed corpus is example input that you want to send your program during fuzz testing. Fuzz engines commonly accept example input
+and then mutate it in order to generate additional data to send to your programs.
+
+There's a ton of info here on fuzzing. If you ever need to build a fuzzer, or perhaps even to select a fuzzer or set
+one up, it'd be very useful to come read more about it.
+
+Some teams run fuzzers continously in their continuous build pipeline. The fuzzers automatically find bugs and generate reports. What
+is this practice called?
+
+Continous fuzzing
+
+Static analysis tools make tradeoffs between false positive (incorrect warnings) and false negatives (missed warnings).
+What is one reason that this tradeoff is necessary?
+
+Statically verifying any program is an undecidable program, that is, there is no algorithm that can determine whether any given
+program will execute without violating any given property.
+
+I found it interesting that many static analysis tools (such as those that would find common issues that make code less readable before a presubmit)
+work by parsing the code into a AST tree (which is just a tree made up of the different code components, like one node might be a == sign, another node might be a variable)
+and then checks if sections of the AST tree match the pattern the tool is looking for and if so, then they issue a warning.
+It makes sense they are looking for code which matches a pattern, but I guess it is faster (and perhaps has fewer false positives)
+if they use an AST tree to do this.
+
+## Chapter 14
+
+What should you verify before a deployment can occur? Give an example of a verification occurring before a deployment can
+take place.
+
+Both *who* deployed a change, and *what* is being deployed. An example of verifying what is being deployed is how
+Google Kubernetes Engine allows you to only deploy images signed by your CI/CD system, and to receive notifications when
+someone uses the breakglass feature to deploy a noncompliant image.
